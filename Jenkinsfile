@@ -1,5 +1,8 @@
 pipeline {
-    agent { docker { image 'node-js' } }
+    agent {
+        docker login,
+        docker { image 'php' }
+    }
     stages {
         stage('build') {
             steps {
