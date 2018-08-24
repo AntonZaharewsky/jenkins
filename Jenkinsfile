@@ -1,7 +1,6 @@
 pipeline {
     agent {
-        docker login,
-        docker { image 'php' }
+        docker { login image 'php' }
     }
     stages {
         stage('build') {
