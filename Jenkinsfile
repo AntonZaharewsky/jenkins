@@ -1,8 +1,9 @@
 pipeline {
+    agent { docker { image 'php' } }
     stages {
         stage('build') {
             steps {
-                ping ya.ru
+                sh 'php --version'
             }
         }
     }
